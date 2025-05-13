@@ -1,0 +1,13 @@
+model Star {
+  id         String   @id @default(uuid())
+  stars      Int
+  totalStars Int
+  forks      Int
+  totalForks Int
+  login      String
+  date       DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([login, date])
+} 

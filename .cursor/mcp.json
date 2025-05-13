@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "Vercel": {
+      "command": "npx",
+      "args": [
+        "-y", "--package", "@vercel/sdk",
+        "--",
+        "mcp", "start",
+        "--bearer-token", "5Oplz4Djc3Ygqo29my9RvDZ3"
+      ]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "sbp_ed4c7bfdb4c6079fbfc7e593c43302f005310155"
+      ]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": ["@browsermcp/mcp@latest"]
+    }
+  },
+  "scripts": {
+    "build": "pnpm run build",
+    "start:prod:backend": "pnpm run start:prod:backend",
+    "start:prod:frontend": "pnpm run start:prod:frontend"
+  }
+} 
