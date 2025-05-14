@@ -4,19 +4,19 @@
   "scope": "tahayoyos-projects",
   "builds": [
     {
-      "src": "apps/frontend/package.json", 
+      "src": "apps/frontend/package.json",
       "use": "@vercel/next"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)", 
+      "src": "/(.*)",
       "dest": "apps/frontend/$1"
     }
   ],
   "framework": "nextjs",
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install",
-  "outputDirectory": ".next",
+  "buildCommand": "cd apps/frontend && npm install && npm run build",
+  "installCommand": "cd apps/frontend && npm install",
+  "outputDirectory": "apps/frontend/.next",
   "regions": ["sin1"]
 } 

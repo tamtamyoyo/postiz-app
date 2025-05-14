@@ -3,6 +3,7 @@ export const dynamic = 'force-dynamic';
 import './global.scss';
 import 'react-tooltip/dist/react-tooltip.css';
 import '@copilotkit/react-ui/styles.css';
+import './globals.css';
 
 import LayoutContext from '@gitroom/frontend/components/layout/layout.context';
 import { ReactNode } from 'react';
@@ -14,9 +15,16 @@ import { Fragment } from 'react';
 import { PHProvider } from '@gitroom/react/helpers/posthog';
 import UtmSaver from '@gitroom/helpers/utils/utm.saver';
 import { ToltScript } from '@gitroom/frontend/components/layout/tolt.script';
-import { FacebookComponent } from '@gitroom/frontend/components/layout/facebook.component';
-
-const chakra = Chakra_Petch({ weight: '400', subsets: ['latin'] });
+ // Other imports...
+ import { Chakra_Petch } from 'next/font/google';
+ import { Inter } from 'next/font/google';
+ 
+ const chakra = Chakra_Petch({ weight: '400', subsets: ['latin'] });
+ const inter = Inter({ subsets: ['latin'] });
+export const metadata = {
+  title: 'Postiz App',
+  description: 'Social media management platform',
+};
 
 export default async function AppLayout({ children }: { children: ReactNode }) {
   const Plausible = !!process.env.STRIPE_PUBLISHABLE_KEY
@@ -24,7 +32,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
     : Fragment;
 
   return (
-    <html className={interClass}>
+    <html lang="en" className={clsx(inter.className, 'dark text-primary !bg-primary')}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
