@@ -7,8 +7,7 @@
   "keywords": [],
   "author": "",
   "engines": {
-    "node": "20.x",
-    "pnpm": "10.6.1"
+    "node": "20.x"
   },
   "packageManager": "pnpm@10.6.1",
   "scripts": {
@@ -273,5 +272,6 @@
     "onlyBuiltDependencies": [
       "bcrypt"
     ]
-  }
+  },
+  "buildCommand": "git submodule update --init --recursive && corepack enable && corepack prepare pnpm@10.6.1 --activate && pnpm install && pnpm run build"
 }

@@ -1,13 +1,14 @@
 {
-  "name": "postiz-frontend",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "next dev -p 4200",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 4200",
-    "pm2": "pm2 start npm --name frontend -- start"
+    "start": "next start",
+    "lint": "next lint",
+    "start:preview": "next start --port 9000",
+    "vercel:deploy": "vercel build && vercel deploy --prebuilt"
   },
   "dependencies": {
     "next": "^15.3.2",
@@ -18,7 +19,6 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "20.x",
-    "pnpm": "10.6.1"
+    "node": "20.x"
   }
 }
