@@ -27,9 +27,9 @@
     "react-loading": "^2.0.3",
     "swr": "^2.3.3",
     "tailwindcss": "^3.4.3",
-    "@solana/wallet-adapter-react": "^0.20.0",
-    "@solana/wallet-adapter-base-ui": "^0.2.0",
-    "@solana/wallet-adapter-base": "^0.10.0"
+    "@solana/wallet-adapter-react": "0.15.21",
+    "@solana/wallet-adapter-base-ui": "0.1.5",
+    "@solana/wallet-adapter-base": "0.9.25"
   },
   "keywords": [],
   "author": "",
