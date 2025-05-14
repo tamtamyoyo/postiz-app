@@ -16,9 +16,12 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "types": ["node"],
     "paths": {
-      "@gitroom/frontend/components/*": ["src/components/*"]
+      "@gitroom/frontend/components/*": ["src/components/*"],
+      "@gitroom/helpers/*": ["../../libraries/helpers/src/*"],
+      "@gitroom/react/*": ["../../libraries/react-shared-libraries/src/*"]
     }
   },
   "include": [
