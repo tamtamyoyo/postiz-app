@@ -27,7 +27,6 @@
     "react-loading": "^2.0.3",
     "swr": "^2.3.3",
     "tailwindcss": "^3.4.3",
-    "@neynar/react": "1.1.0",
     "@solana/wallet-adapter-react": "^0.20.0",
     "@solana/wallet-adapter-base-ui": "^0.2.0",
     "@solana/wallet-adapter-base": "^0.10.0"
