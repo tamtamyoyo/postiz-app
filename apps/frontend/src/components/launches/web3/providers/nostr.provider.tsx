@@ -1,18 +1,10 @@
 'use client';
-import '@neynar/react/dist/style.css';
 import React, { FC, useMemo, useState, useCallback, useEffect } from 'react';
 import { Web3ProviderInterface } from '@gitroom/frontend/components/launches/web3/web3.provider.interface';
 import { useVariables } from '@gitroom/react/helpers/variable.context';
 import { TopTitle } from '@gitroom/frontend/components/launches/helpers/top.title.component';
 import { useModals } from '@mantine/modals';
 import { LoadingComponent } from '@gitroom/frontend/components/layout/loading';
-import {
-  NeynarAuthButton,
-  NeynarContextProvider,
-  Theme,
-  useNeynarContext,
-} from '@neynar/react';
-import { INeynarAuthenticatedUser } from '@neynar/react/dist/types/common';
 import { ButtonCaster } from '@gitroom/frontend/components/auth/providers/farcaster.provider';
 
 export const WrapcasterProvider: FC<Web3ProviderInterface> = (props) => {

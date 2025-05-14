@@ -9,30 +9,15 @@ import {
 import { useWalletMultiButton } from '@solana/wallet-adapter-base-ui';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
-  TorusWalletAdapter,
-  BitgetWalletAdapter,
-  CloverWalletAdapter,
-  Coin98WalletAdapter,
-  FractalWalletAdapter,
-  HyperPayWalletAdapter,
-  KeystoneWalletAdapter,
-  KrystalWalletAdapter,
-  LedgerWalletAdapter,
-  MathWalletAdapter,
-  NightlyWalletAdapter,
-  NufiWalletAdapter,
-  OntoWalletAdapter,
-  ParticleAdapter,
   PhantomWalletAdapter,
-  SafePalWalletAdapter,
-  SaifuWalletAdapter,
-  SalmonWalletAdapter,
   SolflareWalletAdapter,
-  TokenaryWalletAdapter,
+  TorusWalletAdapter,
+  LedgerWalletAdapter,
   TrustWalletAdapter,
-  XDEFIWalletAdapter,
+  MathWalletAdapter,
+  Coin98WalletAdapter,
   TokenPocketWalletAdapter,
-} from '@postiz/wallets';
+} from '@solana/wallet-adapter-wallets';
 
 import {
   WalletModalProvider,
@@ -62,31 +47,15 @@ export const ButtonCaster: FC<{ login: (code: string) => void }> = (props) => {
 
   const wallets = useMemo(
     () => [
-      new TokenPocketWalletAdapter(),
-      new TorusWalletAdapter(),
-      new BitgetWalletAdapter(),
-      new CloverWalletAdapter(),
-      new Coin98WalletAdapter(),
-      new FractalWalletAdapter(),
-      new HyperPayWalletAdapter(),
-      new KeystoneWalletAdapter(),
-      new KrystalWalletAdapter(),
-      new LedgerWalletAdapter(),
-      new MathWalletAdapter(),
-      new NightlyWalletAdapter(),
-      new NufiWalletAdapter(),
-      new OntoWalletAdapter(),
-      new ParticleAdapter(),
       new PhantomWalletAdapter(),
-      new SafePalWalletAdapter(),
-      new SaifuWalletAdapter(),
-      new SalmonWalletAdapter(),
       new SolflareWalletAdapter(),
-      new TokenaryWalletAdapter(),
+      new TorusWalletAdapter(),
+      new LedgerWalletAdapter(),
       new TrustWalletAdapter(),
-      new XDEFIWalletAdapter(),
+      new MathWalletAdapter(),
+      new Coin98WalletAdapter(),
+      new TokenPocketWalletAdapter(),
     ],
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [network]
   );
 

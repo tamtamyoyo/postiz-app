@@ -15,7 +15,6 @@ import { Fragment } from 'react';
 import { PHProvider } from '@gitroom/react/helpers/posthog';
 import UtmSaver from '@gitroom/helpers/utils/utm.saver';
 import { ToltScript } from '@gitroom/frontend/components/layout/tolt.script';
- 
 const chakra = Chakra_Petch({ weight: '400', subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'] });
 export const metadata = {

@@ -85,16 +85,7 @@ backgroundImage: {
   // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
   'gradient-conic':
     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
-  'gradient-conic':
-    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
-  'gradient-conic':
-    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
-  'gradient-conic':
-    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+},
       fontFamily: {
         sans: ['Helvetica Neue'],
       },

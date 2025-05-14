@@ -8,14 +8,13 @@ import React, {
   FC,
   ReactNode,
 } from 'react';
-import { useNeynarContext } from '@neynar/react';
 
 export const NeynarAuthButton: FC<{
   children: ReactNode;
   onLogin: (code: string) => void;
+  client_id: string;
 }> = (props) => {
-  const { children, onLogin } = props;
-  const { client_id } = useNeynarContext();
+  const { children, onLogin, client_id } = props;
 
   const [showModal, setShowModal] = useState(false);
 
