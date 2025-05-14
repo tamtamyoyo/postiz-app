@@ -48,6 +48,7 @@ const nextConfig = {
       '@gitroom/frontend/components': path.resolve(__dirname, 'src/components'),
       '@gitroom/helpers': path.resolve(__dirname, '../../libraries/helpers/src'),
       '@gitroom/react': path.resolve(__dirname, '../../libraries/react-shared-libraries/src'),
+      '@gitroom/nestjs-libraries': path.resolve(__dirname, '../../libraries/nestjs-libraries/src'),
     };
     return config;
   },
