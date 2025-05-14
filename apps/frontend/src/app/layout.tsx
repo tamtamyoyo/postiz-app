@@ -7,7 +7,7 @@ import './globals.css';
 
 import LayoutContext from '@gitroom/frontend/components/layout/layout.context';
 import { ReactNode } from 'react';
-import { Chakra_Petch } from 'next/font/google';
+import { Chakra_Petch, Inter } from 'next/font/google';
 import PlausibleProvider from 'next-plausible';
 import clsx from 'clsx';
 import { VariableContextComponent } from '@gitroom/react/helpers/variable.context';
@@ -15,12 +15,9 @@ import { Fragment } from 'react';
 import { PHProvider } from '@gitroom/react/helpers/posthog';
 import UtmSaver from '@gitroom/helpers/utils/utm.saver';
 import { ToltScript } from '@gitroom/frontend/components/layout/tolt.script';
- // Other imports...
- import { Chakra_Petch } from 'next/font/google';
- import { Inter } from 'next/font/google';
  
- const chakra = Chakra_Petch({ weight: '400', subsets: ['latin'] });
- const inter = Inter({ subsets: ['latin'] });
+const chakra = Chakra_Petch({ weight: '400', subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Postiz App',
   description: 'Social media management platform',
@@ -58,7 +55,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
           isSecured={!process.env.NOT_SECURED}
         >
           <ToltScript />
-          <FacebookComponent />
+          {/* <FacebookComponent /> */}
           <Plausible
             domain={!!process.env.IS_GENERAL ? 'postiz.com' : 'gitroom.com'}
           >

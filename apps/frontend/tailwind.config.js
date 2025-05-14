@@ -77,15 +77,23 @@ module.exports = {
         customColor53: 'var(--color-custom53)',
         customColor54: 'var(--color-custom54)',
       },
-      gridTemplateColumns: {
-        13: 'repeat(13, minmax(0, 1fr));',
-      },
-      backgroundImage: {
-        loginBox: 'url(/auth/login-box.png)',
-        loginBg: 'url(/auth/bg-login.png)',
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+backgroundImage: {
+  loginBox: 'url(/auth/login-box.png)',
+  loginBg: 'url(/auth/bg-login.png)',
+  // Usage: bg-gradient-radial from-blue-500 to-purple-600
+  'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
+  'gradient-conic':
+    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
+  'gradient-conic':
+    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
+  'gradient-conic':
+    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  // Usage: bg-gradient-conic from-red-500 via-yellow-500 to-blue-500
+  'gradient-conic':
+    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
         sans: ['Helvetica Neue'],

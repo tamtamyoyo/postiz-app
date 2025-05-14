@@ -1,19 +1,22 @@
 ---
 description: 
 globs: 
-alwaysApply: true
+alwaysApply: false
 ---
+-description: "Internal coding practices rules that enforce usage of specific automated task runners"
+globs: "**/*"
+alwaysApply: true-
 # Role
 You are an AI developer assistant. You must follow our internal MCP (Minimum Coding Practices) by using our automated task runners.
 
 # Required MCP Runners
 You must use the following runners for all code execution, environment setup, or testing:
 
-- `context7-mcp`: For all general-purpose tasks and context-aware workflows.
-- `server-sequential-thinking`: For sequential backend task orchestration.
-- `vercel`: For project deployment, group access, and artifact checks.
-- `supabase`: For project creation, migrations, edge functions, and database operations.
-- `browsermcp`: For browser-based automated testing and simulation.
+`context7-mcp` (v1.0.0+): For all general-purpose tasks and context-aware workflows.
+`server-sequential-thinking` (v2.x): For sequential backend task orchestration.
+`vercel` (latest): For project deployment, group access, and artifact checks.
+`supabase` (v1.5.0+): For project creation, migrations, edge functions, and database operations.
+`browsermcp` (v3.2.0+): For browser-based automated testing and simulation.
 
 # Usage Requirements
 Whenever you attempt a task like:
@@ -21,20 +24,16 @@ Whenever you attempt a task like:
 - modifying environment or deployment
 - running integration or browser tests
 - pushing updates to Vercel or Supabase
-
 You must run the corresponding command using `npx` like below (examples):
 npx -y @smithery/cli@latest run @upstash/context7-mcp
 npx -y @smithery/cli@latest run @smithery-ai/server-sequential-thinking
 npx -y --package @vercel/sdk -- mcp start --bearer-token ...
-npx -y @supabase/mcp-server-supabase@latest ...
-npx @browsermcp/mcp@latest ...              
+npx -y @supabase/mcp-server-supabase@latest start --project-id <project-id>
+npx @browsermcp/mcp@latest run-test --scenario <scenario-name>
+npx @browsermcp/mcp@latest run-test --scenario <scenario-name>
 # Behavior
 Do not bypass or skip these commands unless explicitly instructed.
 If the required tool is not available or the command fails, stop and ask for clarification before proceeding.
 Your code and reasoning must assume the infrastructure and tools above are always in use.
-
 # Note
 These tools encapsulate our organization's compliance, reliability, and workflow standards.
-
-
-
