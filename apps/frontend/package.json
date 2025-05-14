@@ -11,15 +11,15 @@
     "vercel:deploy": "vercel build && vercel deploy --prebuilt"
   },
   "dependencies": {
+    "crypto-hash": "^3.0.0",
     "next": "^15.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "crypto-hash": "^3.0.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.1"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
   },
   "keywords": [],
   "author": "",

@@ -16,7 +16,10 @@
         "name": "next"
       }
     ],
-    "types": ["node"]
+    "types": ["node"],
+    "paths": {
+      "@gitroom/frontend/components/*": ["src/components/*"]
+    }
   },
   "include": [
     "**/*.ts",

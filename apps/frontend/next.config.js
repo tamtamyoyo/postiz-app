@@ -1,5 +1,7 @@
 // @ts-check
 
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -39,6 +41,13 @@ const nextConfig = {
             : '/404',
       },
     ];
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      '@gitroom/frontend/components': path.resolve(__dirname, 'src/components'),
+    };
+    return config;
   },
 };
 
