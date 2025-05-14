@@ -19,6 +19,7 @@
     "build": "pnpm -r --workspace-concurrency=1 --filter ./apps/frontend --filter ./apps/backend --filter ./apps/workers  --filter ./apps/cron run build",
     "build:backend": "rm -rf apps/backend/dist && pnpm --filter ./apps/backend run build",
     "build:frontend": "rm -rf apps/frontend/dist && pnpm --filter ./apps/frontend run build",
+    "build:frontend:win": "pnpm --filter ./apps/frontend run build",
     "build:workers": "rm -rf apps/workers/dist && pnpm --filter ./apps/workers run build",
     "build:cron": "rm -rf apps/cron/dist && pnpm --filter ./apps/cron run build",
     "build:extension": "rm -rf apps/extension/dist && pnpm --filter ./apps/extension run build",

@@ -4,10 +4,15 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "dotenv -e ../../.env -- next dev -p 4200",
+    "dev": "next dev -p 4200",
     "build": "next build",
-    "start": "dotenv -e ../../.env -- next start -p 4200",
-    "pm2": "pm2 start pnpm --name frontend -- start"
+    "start": "next start -p 4200",
+    "pm2": "pm2 start npm --name frontend -- start"
+  },
+  "dependencies": {
+    "next": "^15.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "keywords": [],
   "author": "",

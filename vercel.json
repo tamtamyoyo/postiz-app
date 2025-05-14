@@ -1,0 +1,22 @@
+{
+  "name": "postiz-app-ss4i",
+  "version": 2,
+  "scope": "tahayoyos-projects",
+  "builds": [
+    {
+      "src": "apps/frontend/package.json", 
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)", 
+      "dest": "apps/frontend/$1"
+    }
+  ],
+  "framework": "nextjs",
+  "buildCommand": "npm install && npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "regions": ["sin1"]
+} 
